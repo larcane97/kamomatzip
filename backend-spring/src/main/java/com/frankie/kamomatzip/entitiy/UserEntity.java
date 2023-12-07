@@ -1,13 +1,13 @@
-package com.frankie.kamomatzip.domain;
+package com.frankie.kamomatzip.entitiy;
 
-import com.frankie.kamomatzip.entitiy.dto.BaseTimeEntity;
+import com.frankie.kamomatzip.dto.BaseTimeEntity;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class User extends BaseTimeEntity {
+public class UserEntity extends BaseTimeEntity {
     @Id @GeneratedValue
     @Column(name = "user_id")
     private long userId;
@@ -15,7 +15,7 @@ public class User extends BaseTimeEntity {
     private String email;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Review> reviews = new ArrayList<>();
+    private List<ReviewEntity> reviewEntities = new ArrayList<>();
 
     private String placeName;
     private String placeLocation;

@@ -1,12 +1,12 @@
-package com.frankie.kamomatzip.domain;
+package com.frankie.kamomatzip.entitiy;
 
-import com.frankie.kamomatzip.entitiy.dto.BaseTimeEntity;
+import com.frankie.kamomatzip.dto.BaseTimeEntity;
 
 import javax.persistence.*;
 
 
 @Entity
-public class PlaceTag extends BaseTimeEntity {
+public class PlaceTagEntity extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,9 +15,9 @@ public class PlaceTag extends BaseTimeEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "place_id")
-    private Place place;
+    private PlaceEntity place;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "tag_id")
-    private Tag tag;
+    private TagEntity tag;
 }

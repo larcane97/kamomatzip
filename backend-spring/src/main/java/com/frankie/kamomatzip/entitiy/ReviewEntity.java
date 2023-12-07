@@ -1,11 +1,11 @@
-package com.frankie.kamomatzip.domain;
+package com.frankie.kamomatzip.entitiy;
 
-import com.frankie.kamomatzip.entitiy.dto.BaseTimeEntity;
+import com.frankie.kamomatzip.dto.BaseTimeEntity;
 
 import javax.persistence.*;
 
 @Entity
-public class Review extends BaseTimeEntity {
+public class ReviewEntity extends BaseTimeEntity {
     @Id
     @GeneratedValue
     @Column(name = "review_id")
@@ -14,11 +14,11 @@ public class Review extends BaseTimeEntity {
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
-    private User user;
+    private UserEntity user;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "place_id")
-    private Place place;
+    private PlaceEntity place;
 
     private String content;
     private int peopleNums;

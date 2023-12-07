@@ -1,4 +1,4 @@
-package com.frankie.kamomatzip.entitiy.dto;
+package com.frankie.kamomatzip.dto;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;
