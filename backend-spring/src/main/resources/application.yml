@@ -1,0 +1,29 @@
+server:
+  port: 8080
+
+
+
+spring:
+  cloud:
+    vault:
+      enabled: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: kamomatzip@gmail.com
+
+    properties:
+      mail:
+        smtp:
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+          auth-code-expiration-millis: 1800000  # 30 * 60 * 1000 == 30분
+          auth: true
+          starttls:
+            enable: true
+            required: true
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl

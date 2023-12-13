@@ -1,6 +1,6 @@
 package com.frankie.kamomatzip.controller;
 
-import com.frankie.kamomatzip.dto.PlaceResponse;
+import com.frankie.kamomatzip.dto.response.PlaceResponse;
 import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
